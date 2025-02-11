@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Создание стажировки работодателем', () => {
 
   beforeEach(() => {
     cy.viewport(1920, 1080)
@@ -64,5 +64,15 @@ describe('template spec', () => {
     cy.get(':nth-child(7) > .form-error > span').within(() => {
       cy.contains('Обязательное поле, максимум 1000 символов').scrollIntoView().should('be.visible')
     })
+
+    const longText = 'A'.repeat(1001);
+
+    cy.get('body > div:nth-child(21) > div.desktop-modal > div > div.vacancy-add-form-wrapper > form > div:nth-child(1) > div.form__labels > div > div:nth-child(6) > div > textarea')
+        .type(longText)
+        .should('have.value', 'A'.repeat(1001));
+
+    cy.get('body > div:nth-child(21) > div.desktop-modal > div > div.vacancy-add-form-wrapper > form > div:nth-child(1) > div.form__labels > div > div:nth-child(7) > div > textarea')
+        .type(longText)
+        .should('have.value', 'A'.repeat(1001))
   })
 })
