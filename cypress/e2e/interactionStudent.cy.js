@@ -4,27 +4,27 @@ describe('Взаимодействие внутри рабочего прост�
         cy.visit('https://dev.profteam.su/')
         cy.get('[href="/login"] > .button', {timeout: 3000}).click()
         cy.get('.form-input--text',
-            {timeout: 3000}).type('testerEmployer')
+            {timeout: 3000}).type('hh')
         cy.get('.form-input--password',
-            {timeout: 3000}).type('Password1')
+            {timeout: 3000}).type('QWEasd123')
         cy.wait(1000)
         cy.get(':nth-child(3) > .button', {timeout: 3000}).click()
         cy.wait(2000)
     })
     it ('Переход в рабочее пространство', () => {
-        cy.get(':nth-child(5) > .menu-item__item-name',
+        cy.get(':nth-child(4) > .menu-item__item-name',
             {timeout: 3000}).click()
         cy.wait(1000)
-        cy.get('#app > div.page > div > div.page-navigation > div.page-nav__mobile > section.responses-page > div.responses-page__nav > div > article:nth-child(2) > div > button:first-child',
+        cy.get(':nth-child(3) > div > button',
             {timeout: 3000}).click()
         cy.wait(2000)
     })
     it('Взаимодействие внутри рабочего пространства', () => {
         cy.wait(2000)
-        cy.get(':nth-child(5) > .menu-item__item-name',
+        cy.get(':nth-child(4) > .menu-item__item-name',
             {timeout: 3000}).click()
         cy.wait(1000)
-        cy.get('#app > div.page > div > div.page-navigation > div.page-nav__mobile > section.responses-page > div.responses-page__nav > div > article:nth-child(2) > div > button',
+        cy.get(':nth-child(3) > div > button',
             {timeout: 3000}).click()
         cy.get('.form-area').type('Привет я не хочу работать')
         cy.wait(1000)
