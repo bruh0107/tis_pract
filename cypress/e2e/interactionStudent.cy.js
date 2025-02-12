@@ -15,7 +15,7 @@ describe('Взаимодействие внутри рабочего прост�
         cy.get(':nth-child(4) > .menu-item__item-name',
             {timeout: 3000}).click()
         cy.wait(1000)
-        cy.get(':nth-child(3) > div > button',
+        cy.get(':nth-child(1) > .responses-list-item__content-company > .button',
             {timeout: 3000}).first().click()
         cy.wait(2000)
     })
@@ -24,7 +24,7 @@ describe('Взаимодействие внутри рабочего прост�
         cy.get(':nth-child(4) > .menu-item__item-name',
             {timeout: 3000}).click()
         cy.wait(1000)
-        cy.get(':nth-child(3) > div > button',
+        cy.get(':nth-child(1) > .responses-list-item__content-company > .button',
             {timeout: 3000}).click()
         cy.get('.form-area').type('Привет я не хочу работать')
         cy.wait(1000)
@@ -32,7 +32,8 @@ describe('Взаимодействие внутри рабочего прост�
             {timeout: 3000}).click()
         cy.get('#file-uploader',
             {timeout: 3000}).selectFile('cypress/fixtures/da.png', {force: true})
-        cy.get('#app > div.page > div > section > section > section > div > div > div:nth-child(16) > div.base-comment__content > div.base-comment__content > div.detailed-workspace-activity-comments__actions > div:nth-child(1) > button',
+        cy.wait(2000)
+        cy.get('#app > div.page > div > section > section > section > div > div > div > article > div.comment-textarea__textarea > div.comment-textarea__buttons > button:nth-child(2)',
             {timeout: 3000}).click()
     })
 })

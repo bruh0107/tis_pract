@@ -15,11 +15,12 @@ describe('Смена статуса рабочего пространства', 
         cy.wait(1000)
     })
     it('Смена статуса рабочего пространства (подтверждение)', () => {
-        cy.get('#app > div.page > div > div.page-navigation > div.page-nav__mobile > section.responses-page > div.responses-list.responses-page__nav > div > article:nth-child(2) > button',
+        cy.get('#app > div.page > div > div.page-navigation > div.page-nav__mobile > section.responses-page > div.responses-list.responses-page__nav > div > article:nth-child(1) > button',
             {timeout: 3000}).click()
         cy.wait(2000)
         cy.get('#app > div.page > div > section > div.detailed-workspace-header > div > div > div > div.status-open__buttons > button:nth-child(1)',
             {timeout: 3000}).click()
+        cy.wait(2000)
     })
 
     it('Смена статуса рабочего пространства (отклонение)', () => {

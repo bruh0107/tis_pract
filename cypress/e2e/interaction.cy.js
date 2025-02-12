@@ -33,7 +33,8 @@ describe('Взаимодействие внутри рабочего прост�
             {timeout: 3000}).click()
         cy.get('#file-uploader',
             {timeout: 3000}).selectFile('cypress/fixtures/da.png', {force: true})
-        cy.get('#app > div.page > div > section > section > section > div > div > div:nth-child(16) > div.base-comment__content > div.base-comment__content > div.detailed-workspace-activity-comments__actions > div:nth-child(1) > button',
+        cy.wait(2000)
+        cy.get('#app > div.page > div > section > section > section > div > div > div.detailed-workspace-activity-comments__menu > article > div.comment-textarea__textarea > div.comment-textarea__buttons > button:nth-child(2)',
             {timeout: 3000}).click()
     })
 })
