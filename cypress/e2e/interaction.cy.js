@@ -15,7 +15,7 @@ describe('Взаимодействие внутри рабочего прост�
         cy.get(':nth-child(5) > .menu-item__item-name',
             {timeout: 3000}).click()
         cy.wait(1000)
-        cy.get('#app > div.page > div > div.page-navigation > div.page-nav__mobile > section.responses-page > div.responses-page__nav > div > article:nth-child(2) > div > button:first-child',
+        cy.get('.infinite-loader > :nth-child(2) > .button',
             {timeout: 3000}).click()
         cy.wait(2000)
     })
@@ -24,8 +24,9 @@ describe('Взаимодействие внутри рабочего прост�
         cy.get(':nth-child(5) > .menu-item__item-name',
             {timeout: 3000}).click()
         cy.wait(1000)
-        cy.get('#app > div.page > div > div.page-navigation > div.page-nav__mobile > section.responses-page > div.responses-page__nav > div > article:nth-child(2) > div > button',
+        cy.get('.infinite-loader > :nth-child(1) > .button',
             {timeout: 3000}).click()
+        cy.wait(2000)
         cy.get('.form-area').type('Привет я не хочу работать')
         cy.wait(1000)
         cy.get('.comment-textarea__buttons > :nth-child(2) > .base-icon',

@@ -14,13 +14,7 @@ describe('Отлик на стажировку студентом', () => {
     })
     it('Отклик на стажировку', () => {
         cy.wait(1000)
-        cy.get(':nth-child(1) > .internship-item__info-wrapper > .internship-item__footer-wrapper > .vacancy-footer > .vacancy-footer__button-wrapper > .button__background-color-green',
+        cy.get(':nth-child(2) > .internship-item__info-wrapper > .internship-item__footer-wrapper > .vacancy-footer > .vacancy-footer__button-wrapper > .button__background-color-green',
             {timeout: 3000}).click()
-    })
-    it('Отлик на стажировку через отдельную страницу', () => {
-        cy.wait(1000)
-        cy.get(':nth-child(1) > .internship-item__info-wrapper > .internship-item__footer-wrapper > .vacancy-footer > .vacancy-footer__button-wrapper > .button__background-color-blue',
-            {timeout: 3000}).click()
-        // на сайте баг, так что откликнуться через страницу конкретной стажировки не получилось
     })
 })

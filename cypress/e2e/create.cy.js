@@ -30,7 +30,7 @@ describe('Создание стажировки работодателем', () 
     cy.get('body > div:nth-child(21) > div.desktop-modal > div > div.vacancy-add-form-wrapper > form > div:nth-child(1) > div.form__labels > div > div:nth-child(3) > div > div > div.form-select__items > div:nth-child(2)',
         {timeout: 3000}).click()
     cy.get('body > div:nth-child(21) > div.desktop-modal > div > div.vacancy-add-form-wrapper > form > div:nth-child(1) > div.form__labels > div > div:nth-child(4) > div > input',
-        {timeout: 3000}).type('2025-02-11')
+        {timeout: 3000}).type('2025-02-20')
     cy.get('body > div:nth-child(21) > div.desktop-modal > div > div.vacancy-add-form-wrapper > form > div:nth-child(1) > div.form__labels > div > div:nth-child(5) > div > input',
         {timeout: 3000}).type('2025-04-16')
     cy.get('body > div:nth-child(21) > div.desktop-modal > div > div.vacancy-add-form-wrapper > form > div:nth-child(1) > div.form__labels > div > div:nth-child(6) > div > textarea',
